@@ -1,0 +1,179 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
+<section class="w-full bg-[#f9fafb] py-10 px-2">
+ <div class="max-w-7xl mx-auto flex flex-col gap-2 md:gap-0">
+  <!-- Header Row -->
+  <div class="flex items-center justify-between mb-7">
+   <h2 class="text-3xl md:text-4xl font-extrabold text-[#2c323e] tracking-tight ml-1 animate-fadeIn">Recent Properties
+    for Buy</h2>
+   <a href="#"
+    class="flex items-center text-blue-500 font-semibold text-sm gap-2 underline-offset-2 hover:underline mr-1 animate-fadeIn">
+    <i class="fas fa-list-ul"></i>
+    <span class="block leading-tight">ALL PROPERTIES FOR<br><span class="font-bold">BUY</span></span>
+   </a>
+  </div>
+  <!-- Cards Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 animate-fadeInUp" id="propertyGrid">
+   <!-- Card 1 (copy and modify for demo) -->
+   <!-- ...populated by JS for animation... -->
+  </div>
+ </div>
+ <style>
+  @keyframes fadeInUp {
+   from {
+    opacity: 0;
+    transform: translateY(48px);
+   }
+
+   to {
+    opacity: 1;
+    transform: none;
+   }
+  }
+
+  .animate-fadeInUp {
+   animation: fadeInUp 1.00s both 0.1s;
+  }
+
+  .property-card {
+   transition: box-shadow .38s, transform .36s;
+  }
+
+  .property-card:hover {
+   box-shadow: 0 12px 32px 0 #267af725, 0 2px 9px #13252f12 !important;
+   transform: scale(1.024) translateY(-3px);
+   z-index: 2;
+  }
+
+  @keyframes fadeIn {
+   from {
+    opacity: 0;
+   }
+
+   to {
+    opacity: 1;
+   }
+  }
+
+  .animate-fadeIn {
+   animation: fadeIn .7s both;
+  }
+
+  .badge-featured {
+   background: #25c991;
+   color: #fff;
+  }
+
+  .badge-buy {
+   background: #f14668;
+   color: #fff;
+  }
+
+  .gray-icon {
+   color: #adb5bd;
+  }
+
+  .price-old {
+   text-decoration: line-through;
+   color: #bbb;
+  }
+ </style>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+ <script>
+  const props = [
+   {
+    img: "https://homepress.stylemixthemes.com/wp-content/uploads/2019/03/townhome-8.jpg",
+    tags: ["BUY"],
+    title: "House on the Arcadia",
+    price: "$1,200/mo", old: null,
+    sub: "",
+    icons: [["fa-bed", "3"], ["fa-bath", "2"], ["fa-calendar-alt", "2013"], ["fa-door-closed", "1"]]
+   },
+   {
+    img: "https://homepress.stylemixthemes.com/wp-content/uploads/2019/03/townhome-2.jpg",
+    tags: ["BUY"],
+    title: "House on the Clarita",
+    price: "$1,200/mo", old: null,
+    sub: "",
+    icons: [["fa-bed", "4"], ["fa-bath", "2"], ["fa-calendar-alt", "2018"], ["fa-door-closed", "2"]]
+   },
+   {
+    img: "https://homepress.stylemixthemes.com/wp-content/uploads/2019/03/townhome-3.jpg",
+    tags: ["FEATURED", "BUY"],
+    title: "Villa in Hawthorne",
+    price: "$7,500/mo", old: "$9,000/mo",
+    sub: "",
+    icons: [["fa-bed", "5"], ["fa-bath", "3"], ["fa-calendar-alt", "2019"], ["fa-door-closed", "2"]]
+   },
+   {
+    img: "https://homepress.stylemixthemes.com/wp-content/uploads/2019/03/townhome-4.jpg",
+    tags: ["FEATURED", "BUY"],
+    title: "Villa in Captain Street",
+    price: "$125,000", old: null,
+    sub: "",
+    icons: [["fa-bed", "5"], ["fa-bath", "4"], ["fa-calendar-alt", "2019"], ["fa-door-closed", "1"]]
+   },
+   {
+    img: "https://homepress.stylemixthemes.com/wp-content/uploads/2019/03/townhome-5.jpg",
+    tags: ["FEATURED", "BUY"],
+    title: "Luxury villa in las vegas",
+    price: "$150,000", old: "$165,000",
+    sub: "",
+    icons: [["fa-bed", "6"], ["fa-bath", "3"], ["fa-calendar-alt", "2019"], ["fa-door-closed", "2"]]
+   },
+   {
+    img: "https://homepress.stylemixthemes.com/wp-content/uploads/2019/03/townhome-6.jpg",
+    tags: ["FEATURED", "BUY"],
+    title: "Villa on Mane",
+    price: "$300,000", old: "$315,000",
+    sub: "",
+    icons: [["fa-bed", "4"], ["fa-bath", "3"], ["fa-calendar-alt", "2019"], ["fa-door-closed", "2"]]
+   },
+   {
+    img: "https://homepress.stylemixthemes.com/wp-content/uploads/2019/03/townhome-7.jpg",
+    tags: ["FEATURED", "BUY"],
+    title: "Villa on Hawthorne",
+    price: "$450,000", old: "$600,000",
+    sub: "",
+    icons: [["fa-bed", "3"], ["fa-bath", "5"], ["fa-calendar-alt", "1897"], ["fa-door-closed", "2"]]
+   },
+   {
+    img: "https://homepress.stylemixthemes.com/wp-content/uploads/2019/03/townhome-8.jpg",
+    tags: ["BUY"],
+    title: "Villa Sabrina",
+    price: "$2,000,000", old: null,
+    sub: "",
+    icons: [["fa-bed", "6"], ["fa-bath", "3"], ["fa-calendar-alt", "2013"], ["fa-door-closed", "5"]]
+   }
+  ];
+  let grid = document.getElementById('propertyGrid');
+  grid.innerHTML = props.map((p, i) => `
+      <div class="property-card bg-white rounded-lg overflow-hidden shadow transition-all group relative cursor-pointer flex flex-col"
+           style="animation:fadeInUp .9s both ${0.08 + 0.07 * i}s;">
+        <div class="relative w-full h-48 overflow-hidden">
+          <img src="${p.img}" class="object-cover w-full h-full transition-transform group-hover:scale-105 duration-500" alt="${p.title}">
+          <div class="absolute top-3 left-3 flex gap-2 z-10">
+            ${p.tags.map(tag => `
+              <span class="${tag == 'FEATURED' ? 'badge-featured' : 'badge-buy'} text-xs font-bold px-2 py-0.5 rounded mr-1">${tag}</span>
+            `).join('')}
+          </div>
+        </div>
+        <div class="p-4 flex flex-col gap-1 flex-grow">
+          <div class="font-semibold text-base text-[#23292c] mb-0.5">${p.title}</div>
+          <div class="flex items-baseline gap-2">
+            ${p.old ? `<span class="price-old mr-1 text-xs">${p.old}</span>` : ""}
+            <span class="text-[#2c323e] font-bold">${p.price}</span>
+            <span class="ml-auto text-gray-400"><i class="fas fa-eye"></i></span>
+          </div>
+          <div class="flex flex-wrap gap-5 mt-2 text-gray-500 text-sm">
+            ${p.icons.map(([icon, val]) => `
+              <span class="flex items-center gap-1">
+                <i class="fas ${icon} gray-icon"></i> ${val}
+              </span>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `).join('');
+ </script>
+</section>
