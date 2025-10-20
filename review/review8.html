@@ -1,0 +1,209 @@
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<section class="w-full  bg-[#293b38] px-2 pt-8 pb-0 flex flex-col justify-between">
+ <!-- Top/Body -->
+ <div class="flex flex-col lg:flex-row items-center max-w-7xl w-full mx-auto mt-4 mb-6">
+  <!-- LEFT: Stats/Text -->
+  <div class="flex-1 flex flex-col px-2 lg:px-0 items-start justify-center mb-8 lg:mb-0">
+   <div class="flex items-center mb-4">
+    <span class="bg-lime-300 rounded-full p-2 mr-2">
+     <svg width="22" height="22" fill="currentColor" viewBox="0 0 20 20">
+      <path
+       d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-6.254v1.504a1 1 0 11-2 0V11.75C8.057 11.333 7.5 10.443 7.5 9.5A2.5 2.5 0 0112.5 9.5c0 .943-.557 1.833-1.5 2.246zM10 5a1 1 0 100 2 1 1 0 000-2z">
+      </path>
+     </svg>
+    </span>
+    <span class="text-[#e1e5ea] font-medium text-lg">Students feedback</span>
+   </div>
+   <h2 class="font-bold text-white text-3xl md:text-4xl lg:text-5xl leading-tight mb-0">
+    Trusted by<br>
+    genius people.
+   </h2>
+   <p class="mt-5 text-base md:text-lg text-[#949b97] max-w-md">
+    Lorem ipsum dolor sit amet consectetur adipiscing elit venenatis dictum nec.
+   </p>
+   <div class="flex items-end mt-8">
+    <span class="text-white text-4xl md:text-5xl font-bold mr-3 leading-none">99%</span>
+    <span class="text-[#b0b6bb] text-base md:text-lg leading-tight">
+     Student's complete<br />course successfully.
+    </span>
+   </div>
+  </div>
+
+  <!-- RIGHT: Slider/Review Card -->
+  <div class="relative flex-1 flex justify-center items-center px-2 w-full">
+   <!-- Left Arrow -->
+   <button id="prevBtn"
+    class="absolute left-0 lg:left-[-32px] top-1/2 -translate-y-1/2 bg-white w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full shadow-lg z-20">
+    <svg class="w-6 h-6 text-[#253a37]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+    </svg>
+   </button>
+   <!-- Right Arrow -->
+   <button id="nextBtn"
+    class="absolute right-0 lg:right-[-32px] top-1/2 -translate-y-1/2 bg-white w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full shadow-lg z-20">
+    <svg class="w-6 h-6 text-[#253a37]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+   </button>
+   <!-- REVIEW SLIDER -->
+   <div
+    class="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl h-[350px] sm:h-[340px] flex items-center overflow-hidden"
+    id="slider">
+    <!-- Slider content will be injected here -->
+   </div>
+  </div>
+ </div>
+
+ <!-- LOGOS Row - Responsive -->
+ <div class="flex flex-row flex-wrap items-center justify-center gap-x-10 gap-y-2 mt-6 pb-8">
+  <img src="https://craftohtml.themezaa.com/images/logo-walmart-white.svg" alt="Walmart"
+   class="h-8 md:h-10 w-auto grayscale brightness-125" />
+  <img src="https://craftohtml.themezaa.com/images/logo-logitech-white.svg" alt="Logitech"
+   class="h-8 md:h-10 w-auto grayscale brightness-125" />
+  <img src="https://craftohtml.themezaa.com/images/logo-invision-white.svg" alt="Invision"
+   class="h-6 md:h-8 w-auto grayscale brightness-125" />
+  <img src="https://craftohtml.themezaa.com/images/logo-yahoo-white.svg" alt="Yahoo"
+   class="h-8 md:h-10 w-auto grayscale brightness-125" />
+  <img src="https://craftohtml.themezaa.com/images/logo-monday-white.svg" alt="Monday.com"
+   class="h-6 md:h-8 w-auto grayscale brightness-125" />
+ </div>
+
+ <style>
+  @keyframes slideInR {
+   0% {
+    transform: translateX(120%);
+    opacity: 0.1
+   }
+
+   50% {
+    transform: translateX(-10px);
+    opacity: 1
+   }
+
+   100% {
+    transform: translateX(0);
+    opacity: 1
+   }
+  }
+
+  @keyframes slideOutL {
+   0% {
+    transform: translateX(0);
+    opacity: 1
+   }
+
+   100% {
+    transform: translateX(-120%);
+    opacity: 0
+   }
+  }
+
+  .slide-in-right {
+   animation: slideInR 0.7s cubic-bezier(.88, -0.23, 0, 1.18);
+  }
+
+  .slide-out-left {
+   animation: slideOutL 0.7s cubic-bezier(.88, -0.23, 0, 1.18);
+  }
+ </style>
+</section>
+
+<script>
+ // 5 Dummy Reviews (replace images for variety if needed)
+ const reviews = [{
+  name: "Charlotte smith",
+  title: "Business owner",
+  text: "Course materials were good, the mentoring approach was good and working with other people via the internet was good.",
+  img: "https://craftohtml.themezaa.com/images/demo-elearning-04.jpg"
+ },
+ {
+  name: "Arjun Mehra",
+  title: "Software Engineer",
+  text: "Loved the clear explanations and helpful guidance. Collaborative sessions made learning enjoyable.",
+  img: "https://craftohtml.themezaa.com/images/demo-elearning-04.jpg"
+ },
+ {
+  name: "Priya Kaur",
+  title: "Startup Founder",
+  text: "Great mentorship—supportive and practical. Networking with peers added lots of value.",
+  img: "https://craftohtml.themezaa.com/images/demo-elearning-04.jpg"
+ },
+ {
+  name: "Michael Lee",
+  title: "UX Designer",
+  text: "The course content was well-structured. The hands-on practice was my favourite part.",
+  img: "https://craftohtml.themezaa.com/images/demo-elearning-04.jpg"
+ },
+ {
+  name: "Simran Chawla",
+  title: "Digital Marketer",
+  text: "Engaging classes, excellent community. I improved my skills quickly with expert support.",
+  img: "https://craftohtml.themezaa.com/images/demo-elearning-04.jpg"
+ }
+ ];
+ let current = 0;
+ let animating = false;
+
+ function renderReview(idx, anim = "slide-in-right") {
+  const rev = reviews[idx];
+  const stars = Array(5).fill().map(() =>
+   `<svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 .587l3.668 7.157 7.932 1.151-5.8 5.626 1.37 7.887L12 18.897l-7.17 3.761 1.37-7.887-5.8-5.626 7.932-1.151z"/>
+      </svg>`
+  ).join('');
+  // Responsive sizing
+  document.getElementById("slider").innerHTML = `
+      <div class="absolute inset-0 flex flex-row items-center w-full rounded-xl shadow-2xl bg-white overflow-hidden ${anim} transition-all duration-700" id="activeReview">
+        <div class="flex-shrink-0 flex items-center justify-center bg-[#f5f7f6] w-28 h-40 sm:w-[170px] sm:h-[230px] lg:w-[250px] lg:h-[340px]">
+          <img src="${rev.img}" alt="Reviewer" class="rounded-xl object-cover w-16 h-28 sm:w-[110px] sm:h-[170px] lg:w-[170px] lg:h-[230px] mx-auto my-auto" />
+        </div>
+        <div class="flex-1 px-2 sm:px-4 md:px-8 py-5 flex flex-col justify-center">
+          <div class="flex items-center mb-3 sm:mb-4">
+            <div class="flex space-x-1 bg-[#fdb94a] py-1 px-3 sm:px-4 rounded-[15px]">${stars}</div>
+          </div>
+          <div class="text-[#6d736d] text-base sm:text-lg leading-relaxed mb-2 sm:mb-5">
+            ${rev.text}
+          </div>
+          <div>
+            <div class="font-bold text-[#253a37] text-base sm:text-lg">${rev.name}</div>
+            <div class="text-gray-400 text-sm sm:text-base pt-1">${rev.title}</div>
+          </div>
+        </div>
+      </div>
+    `;
+ }
+
+ function nextReview() {
+  if (animating) return;
+  animating = true;
+  // Animate old out
+  const old = document.getElementById("activeReview");
+  if (old) old.classList.remove("slide-in-right");
+  if (old) old.classList.add("slide-out-left");
+  setTimeout(() => {
+   current = (current + 1) % reviews.length;
+   renderReview(current, "slide-in-right");
+   animating = false;
+  }, 700);
+ }
+
+ function prevReview() {
+  if (animating) return;
+  animating = true;
+  const old = document.getElementById("activeReview");
+  if (old) old.classList.remove("slide-in-right");
+  if (old) old.classList.add("slide-out-left");
+  setTimeout(() => {
+   current = (current - 1 + reviews.length) % reviews.length;
+   renderReview(current, "slide-in-right");
+   animating = false;
+  }, 700);
+ }
+
+ renderReview(current);
+ setInterval(nextReview, 3000);
+ document.getElementById("nextBtn").onclick = nextReview;
+ document.getElementById("prevBtn").onclick = prevReview;
+</script>
