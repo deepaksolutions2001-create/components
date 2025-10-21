@@ -1,5 +1,15 @@
-<!-- Tailwind CDN -->
+<!-- Tailwind CSS (Play CDN core) -->
 <script src="https://cdn.tailwindcss.com"></script>
+<!-- Tailwind CSS (Play CDN with plugins) -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+
+<!-- Font Awesome Free (all styles) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  crossorigin="anonymous">
+<!-- Font Awesome Brands (second include) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+  crossorigin="anonymous">
+
 <section class="relative w-full h-[90vh] min-h-[520px] flex items-center overflow-hidden">
   <!-- Background image -->
   <div class="absolute inset-0 w-full h-full -z-10">
@@ -22,7 +32,7 @@
         Discover the Art of Sustainable and Beautiful Landscapes
       </div>
       <div class="flex gap-4 items-center mt-1">
-        <a class="bg-[#ffe061] hover:bg-yellow-400 text-[#39392f] font-semibold text-base py-3 px-7 rounded-full shadow-lg transition-all focus:outline-none outline-none"
+        <a class="bg-yellow-300 hover:bg-yellow-400 text-stone-700 font-semibold text-base py-3 px-7 rounded-full shadow-lg transition-all focus:outline-none outline-none"
           href="#">
           Get a Free Quote
         </a>
@@ -32,7 +42,7 @@
         </a>
       </div>
     </div>
-    <!-- Right: Stretch person image, always touches the bottom and fits hero height -->
+    <!-- Right: Stretch person image (optional, currently commented) -->
     <!-- <div class="flex-1 flex items-end justify-end md:pt-8 pb-0 h-full">
       <img src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=600&q=80"
         alt="Gardener"

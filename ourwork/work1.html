@@ -1,88 +1,87 @@
-<!-- Tailwind CDN -->
+<!-- Tailwind CSS (Play CDN core) -->
 <script src="https://cdn.tailwindcss.com"></script>
+<!-- Tailwind CSS (Play CDN with plugins) -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
 
-<section class="w-full min-h-[660px] bg-[#f8faf7] flex flex-col items-center py-14 px-2">
- <!-- Title -->
- <div class="max-w-4xl w-full mx-auto text-center">
-  <div class="text-xs font-semibold tracking-[0.22em] uppercase mb-2 text-[#23362d]">WHAT WE DO</div>
-  <h2 class="text-4xl md:text-5xl font-extrabold text-[#23362d] mb-8 mt-3 leading-tight">
-   Our Full-Spectrum<br>Construction Services
-  </h2>
- </div>
- <!-- Service Cards -->
- <div class="w-full max-w-5xl flex flex-col md:flex-row gap-8 justify-center items-stretch mx-auto mt-20">
-  <!-- Card 1 -->
-  <div class="flex-1 flex flex-col items-center">
-   <div class="w-full flex justify-center">
-    <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=550&q=80"
-     alt="Residential Construction min-h-400px" class="rounded-xl shadow-lg object-cover aspect-[1.2]" />
-   </div>
-   <div class="-mt-14 w-[95%] bg-white rounded-xl shadow-lg px-6 py-8 flex flex-col items-center border border-white">
-    <div class="mb-4">
-     <!-- Built-in vector icon -->
-     <svg width="44" height="44" fill="none" stroke="#234d3c" stroke-width="2.25" viewBox="0 0 32 32">
-      <rect x="5" y="16" width="22" height="10" rx="2" />
-      <rect x="10" y="7" width="12" height="9" rx="1.5" />
-      <line x1="13" y1="20" x2="13" y2="24" />
-      <line x1="19" y1="20" x2="19" y2="24" />
-     </svg>
-    </div>
-    <h4 class="text-2xl font-bold text-[#234d3c] mb-2 text-center">Residential Construction</h4>
-    <div class="text-gray-600 mb-3 text-center text-[1.05rem]">
-     Custom-built homes designed with care, quality, and Austin’s unique character in mind.
-    </div>
-    <a href="#"
-     class="text-[#234d3c] border-b border-[#234d3c] font-semibold text-sm uppercase hover:text-[#1e3928] duration-150">ENQUIRE
-     NOW</a>
-   </div>
+<!-- Font Awesome Free (all styles) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  crossorigin="anonymous">
+<!-- Font Awesome Brands (second include) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+  crossorigin="anonymous">
+
+<section class="w-full min-h-[660px] bg-slate-50 flex flex-col items-center py-14 px-2">
+  <!-- Title -->
+  <div class="max-w-4xl w-full mx-auto text-center">
+    <div class="text-xs font-semibold tracking-[0.22em] uppercase mb-2 text-emerald-900">WHAT WE DO</div>
+    <h2 class="text-4xl md:text-5xl font-extrabold text-emerald-900 mb-8 mt-3 leading-tight">
+      Our Full-Spectrum<br>Construction Services
+    </h2>
   </div>
-  <!-- Card 2 -->
-  <div class="flex-1 flex flex-col items-center">
-   <div class="w-full flex justify-center">
-    <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=550&q=80"
-     alt="Residential Construction" class="rounded-xl shadow-lg object-cover aspect-[1.2]" />
-   </div>
-   <div class="-mt-14 w-[95%] bg-white rounded-xl shadow-lg px-6 py-8 flex flex-col items-center border border-white">
-    <div class="mb-4">
-     <svg width="44" height="44" fill="none" stroke="#234d3c" stroke-width="2.25" viewBox="0 0 32 32">
-      <rect x="7" y="12" width="18" height="14" rx="2" />
-      <rect x="13" y="6" width="6" height="6" rx="1" />
-      <line x1="10" y1="18" x2="10" y2="22" />
-      <line x1="16" y1="18" x2="16" y2="22" />
-      <line x1="22" y1="18" x2="22" y2="22" />
-     </svg>
+
+  <!-- Service Cards -->
+  <div class="w-full max-w-5xl flex flex-col md:flex-row gap-8 justify-center items-stretch mx-auto mt-20">
+    <!-- Card 1 -->
+    <div class="flex-1 flex flex-col items-center">
+      <div class="w-full flex justify-center">
+        <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=550&q=80"
+          alt="Residential Construction min-h-400px" class="rounded-xl shadow-lg object-cover aspect-[1.2]" />
+      </div>
+      <div
+        class="-mt-14 w-[95%] bg-white rounded-xl shadow-lg px-6 py-8 flex flex-col items-center border border-white">
+        <div class="mb-4">
+          <i class="fa-solid fa-house-chimney text-emerald-800 text-[44px]" aria-hidden="true"></i>
+        </div>
+        <h4 class="text-2xl font-bold text-emerald-800 mb-2 text-center">Residential Construction</h4>
+        <div class="text-gray-600 mb-3 text-center text-[1.05rem]">
+          Custom-built homes designed with care, quality, and Austin’s unique character in mind.
+        </div>
+        <a href="#"
+          class="text-emerald-800 border-b border-emerald-800 font-semibold text-sm uppercase hover:text-emerald-900 duration-150">ENQUIRE
+          NOW</a>
+      </div>
     </div>
-    <h4 class="text-2xl font-bold text-[#234d3c] mb-2 text-center">Commercial Buildings</h4>
-    <div class="text-gray-600 mb-3 text-center text-[1.05rem]">
-     Smart, scalable commercial spaces that support growth and reflect your business values.
+
+    <!-- Card 2 -->
+    <div class="flex-1 flex flex-col items-center">
+      <div class="w-full flex justify-center">
+        <img src="https://images.unsplash.com/photo-1460518451285-97b6aa326961?auto=format&fit=crop&w=550&q=80"
+          alt="Residential Construction" class="rounded-xl shadow-lg object-cover aspect-[1.2]" />
+      </div>
+      <div
+        class="-mt-14 w-[95%] bg-white rounded-xl shadow-lg px-6 py-8 flex flex-col items-center border border-white">
+        <div class="mb-4">
+          <i class="fa-solid fa-building text-emerald-800 text-[44px]" aria-hidden="true"></i>
+        </div>
+        <h4 class="text-2xl font-bold text-emerald-800 mb-2 text-center">Commercial Buildings</h4>
+        <div class="text-gray-600 mb-3 text-center text-[1.05rem]">
+          Smart, scalable commercial spaces that support growth and reflect your business values.
+        </div>
+        <a href="#"
+          class="text-emerald-800 border-b border-emerald-800 font-semibold text-sm uppercase hover:text-emerald-900 duration-150">ENQUIRE
+          NOW</a>
+      </div>
     </div>
-    <a href="#"
-     class="text-[#234d3c] border-b border-[#234d3c] font-semibold text-sm uppercase hover:text-[#1e3928] duration-150">ENQUIRE
-     NOW</a>
-   </div>
+
+    <!-- Card 3 -->
+    <div class="flex-1 flex flex-col items-center">
+      <div class="w-full flex justify-center">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=550&q=80"
+          alt="Remodeling" class="rounded-xl shadow-lg object-cover aspect-[1.2]" />
+      </div>
+      <div
+        class="-mt-14 w-[95%] bg-white rounded-xl shadow-lg px-6 py-8 flex flex-col items-center border border-white">
+        <div class="mb-4">
+          <i class="fa-solid fa-screwdriver-wrench text-emerald-800 text-[44px]" aria-hidden="true"></i>
+        </div>
+        <h4 class="text-2xl font-bold text-emerald-800 mb-2 text-center">Renovation &amp; Remodeling</h4>
+        <div class="text-gray-600 mb-3 text-center text-[1.05rem]">
+          Transform existing spaces with modern upgrades, improved function, and fresh appeal.
+        </div>
+        <a href="#"
+          class="text-emerald-800 border-b border-emerald-800 font-semibold text-sm uppercase hover:text-emerald-900 duration-150">ENQUIRE
+          NOW</a>
+      </div>
+    </div>
   </div>
-  <!-- Card 3 -->
-  <div class="flex-1 flex flex-col items-center">
-   <div class="w-full flex justify-center">
-    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=550&q=80"
-     alt="Remodeling" class="rounded-xl shadow-lg object-cover aspect-[1.2]" />
-   </div>
-   <div class="-mt-14 w-[95%] bg-white rounded-xl shadow-lg px-6 py-8 flex flex-col items-center border border-white">
-    <div class="mb-4">
-     <svg width="44" height="44" fill="none" stroke="#234d3c" stroke-width="2.25" viewBox="0 0 32 32">
-      <path d="M6 18 V12 L16 6 L26 12 V18" />
-      <rect x="10" y="18" width="12" height="8" rx="2" />
-      <path d="M14 22 H18" />
-     </svg>
-    </div>
-    <h4 class="text-2xl font-bold text-[#234d3c] mb-2 text-center">Renovation & Remodeling</h4>
-    <div class="text-gray-600 mb-3 text-center text-[1.05rem]">
-     Transform existing spaces with modern upgrades, improved function, and fresh appeal.
-    </div>
-    <a href="#"
-     class="text-[#234d3c] border-b border-[#234d3c] font-semibold text-sm uppercase hover:text-[#1e3928] duration-150">ENQUIRE
-     NOW</a>
-   </div>
-  </div>
- </div>
 </section>

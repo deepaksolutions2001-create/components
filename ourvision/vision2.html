@@ -1,4 +1,14 @@
+<!-- Tailwind CSS (Play CDN core) -->
 <script src="https://cdn.tailwindcss.com"></script>
+<!-- Tailwind CSS (Play CDN with plugins) -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+
+<!-- Font Awesome Free (all styles) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+ crossorigin="anonymous">
+<!-- Font Awesome Brands (second include) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+ crossorigin="anonymous">
 
 <section class="w-full bg-white py-16 px-6 md:px-12 overflow-hidden relative font-sans">
  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-8 relative">
@@ -15,9 +25,9 @@
 
    <!-- Years overlay centered on circle -->
    <div id="years-wrap" class="absolute z-30 flex flex-col items-center justify-center text-center select-none">
-    <span id="years-count" class="font-extrabold text-[#222F43] leading-none"></span>
-    <span id="years-plus" class="font-extrabold text-[#222F43] leading-none"></span>
-    <span class="mt-4 px-3 py-1 text-sm md:text-base font-medium text-[#444b58] bg-[#ffe066] rounded-sm shadow">
+    <span id="years-count" class="font-extrabold text-slate-900 leading-none"></span>
+    <span id="years-plus" class="font-extrabold text-slate-900 leading-none"></span>
+    <span class="mt-4 px-3 py-1 text-sm md:text-base font-medium text-slate-600 bg-amber-300 rounded-sm shadow">
      Years working experience
     </span>
    </div>
@@ -30,14 +40,15 @@
     class="absolute z-40" />
 
    <span
-    class="inline-block bg-indigo-100 text-indigo-700 font-semibold text-xs rounded-full px-6 py-2 mb-4 tracking-widest">CREATIVE
-    APPROACH</span>
+    class="inline-block bg-indigo-100 text-indigo-700 font-semibold text-xs rounded-full px-6 py-2 mb-4 tracking-widest">
+    CREATIVE APPROACH
+   </span>
 
-   <h2 class="font-extrabold text-3xl sm:text-4xl md:text-5xl text-[#222F43] leading-tight mb-4">
+   <h2 class="font-extrabold text-3xl sm:text-4xl md:text-5xl text-slate-900 leading-tight mb-4">
     Powerful agency for <br class="hidden md:block" /> corporate business.
    </h2>
 
-   <p class="text-[#747C8E] text-base sm:text-lg mb-6 leading-relaxed">
+   <p class="text-slate-600 text-base sm:text-lg mb-6 leading-relaxed">
     We strive to develop real-world web solutions that are ideal for small to large projects with bespoke project
     requirements.
     <br class="hidden md:block" />
@@ -46,16 +57,12 @@
 
    <div class="flex flex-col sm:flex-row items-center gap-4">
     <a href="#"
-     class="bg-[#222F43] hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 flex items-center">
+     class="bg-slate-900 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg transition-all duration-300 flex items-center">
      Read about us
-     <svg class="w-5 h-5 ml-2" fill="none" stroke="white" stroke-width="3" viewBox="0 0 24 24">
-      <path d="M13 5l7 7-7 7M5 12h14"></path>
-     </svg>
+     <i class="fa-solid fa-arrow-right text-white text-[18px] ml-2" aria-hidden="true"></i>
     </a>
-    <span class="text-[#222F43] font-semibold flex items-center gap-2 text-base">
-     <svg class="w-5 h-5" fill="none" stroke="#222F43" stroke-width="2.5" viewBox="0 0 24 24">
-      <path d="M3 5h18M8 17v-4H6V9h12v4h-2v4"></path>
-     </svg>
+    <span class="text-slate-900 font-semibold flex items-center gap-2 text-base">
+     <i class="fa-solid fa-phone text-slate-900 text-[18px]" aria-hidden="true"></i>
      1800 222 000
     </span>
    </div>
@@ -66,27 +73,27 @@
  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 md:mt-16 max-w-5xl mx-auto text-center">
   <div>
    <span id="stat1"
-    class="text-5xl md:text-6xl font-extrabold text-[#222F43] border-b-[6px] border-[#ffe066] pb-1 px-4">0</span>
-   <p class="mt-2 text-[#222F43] font-bold text-sm md:text-base tracking-wider">TELEPHONIC TALK</p>
+    class="text-5xl md:text-6xl font-extrabold text-slate-900 border-b-[6px] border-amber-300 pb-1 px-4">0</span>
+   <p class="mt-2 text-slate-900 font-bold text-sm md:text-base tracking-wider">TELEPHONIC TALK</p>
   </div>
   <div>
    <span id="stat2"
-    class="text-5xl md:text-6xl font-extrabold text-[#222F43] border-b-[6px] border-[#ffe066] pb-1 px-4">0</span>
-   <p class="mt-2 text-[#222F43] font-bold text-sm md:text-base tracking-wider">CASES SOLVED</p>
+    class="text-5xl md:text-6xl font-extrabold text-slate-900 border-b-[6px] border-amber-300 pb-1 px-4">0</span>
+   <p class="mt-2 text-slate-900 font-bold text-sm md:text-base tracking-wider">CASES SOLVED</p>
   </div>
   <div>
    <span id="stat3"
-    class="text-5xl md:text-6xl font-extrabold text-[#222F43] border-b-[6px] border-[#ffe066] pb-1 px-4">0</span>
-   <p class="mt-2 text-[#222F43] font-bold text-sm md:text-base tracking-wider">COFFEE CUPS</p>
+    class="text-5xl md:text-6xl font-extrabold text-slate-900 border-b-[6px] border-amber-300 pb-1 px-4">0</span>
+   <p class="mt-2 text-slate-900 font-bold text-sm md:text-base tracking-wider">COFFEE CUPS</p>
   </div>
   <div>
    <span id="stat4"
-    class="text-5xl md:text-6xl font-extrabold text-[#222F43] border-b-[6px] border-[#ffe066] pb-1 px-4">0</span>
-   <p class="mt-2 text-[#222F43] font-bold text-sm md:text-base tracking-wider">HAPPY CLIENTS</p>
+    class="text-5xl md:text-6xl font-extrabold text-slate-900 border-b-[6px] border-amber-300 pb-1 px-4">0</span>
+   <p class="mt-2 text-slate-900 font-bold text-sm md:text-base tracking-wider">HAPPY CLIENTS</p>
   </div>
  </div>
 
- <!-- Styles & responsive positioning -->
+ <!-- Styles & responsive positioning (unchanged layout logic) -->
  <style>
   /* Desktop-first absolute sizes */
   #big-circle {
@@ -270,7 +277,6 @@
     display: none;
    }
 
-   /* hide badge on very small screens to avoid overlap */
    /* ensure right column stacks under the circle visually */
    .max-w-7xl>.flex {
     align-items: center;
@@ -309,7 +315,6 @@
    let current = start;
    const stepTime = Math.max(Math.floor(duration / (target / 10)), minTimer);
    const startTime = performance.now();
-
    function step(now) {
     const elapsed = now - startTime;
     const progress = Math.min(elapsed / duration, 1);
@@ -320,20 +325,16 @@
    }
    requestAnimationFrame(step);
   }
-
   document.addEventListener('DOMContentLoaded', function () {
    // years plus display
    const yearsEl = document.getElementById('years-count');
    const plusEl = document.getElementById('years-plus');
-
    // initialize text
    yearsEl.classList.add('animate-count');
    plusEl.classList.add('animate-count');
-
    // run counters
    countUp(yearsEl, 28, 900);
    plusEl.textContent = '+';
-
    countUp(document.getElementById('stat1'), 4586, 1500);
    countUp(document.getElementById('stat2'), 583, 1600);
    countUp(document.getElementById('stat3'), 6548, 1900);

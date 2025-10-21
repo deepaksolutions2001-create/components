@@ -1,0 +1,105 @@
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Add Font Awesome CDN in your HTML <head> section -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- Experienced Instructors Section -->
+<section class="w-full bg-slate-900 text-slate-200">
+ <div class="mx-auto w-[92%] max-w-7xl py-14 md:py-20">
+  <!-- Heading -->
+  <header class="mb-10 md:mb-14">
+   <h2 class="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight text-white">
+    You Will Be Taught by
+   </h2>
+   <p class="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
+    <span class="text-indigo-300">Experienced</span> Instructors
+   </p>
+  </header>
+
+  <!-- Cards -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+   <!-- Card 1 -->
+   <article class="group rounded-3xl  overflow-hidden hover:ring-indigo-400/60 transition-all duration-500">
+    <!-- Image block (soft gradient bg to match look) -->
+    <div class="relative aspect-[5/5] bg-gradient-to-br from-pink-200/30 via-rose-200/30 to-purple-200/30">
+     <img src="https://the7.io/elementor-ai/wp-content/uploads/sites/132/2025/01/persons006.jpg" alt="Amelia Rivers"
+      class="absolute inset-0 h-full w-full object-cover mix-blend-luminosity group-hover:scale-[1.03] transition-transform duration-700" />
+    </div>
+    <!-- Text -->
+    <div class="px-7 md:px-8 py-6 md:py-7">
+     <h3 class="text-xl md:text-2xl font-semibold text-white">Amelia Rivers</h3>
+     <p class="text-indigo-300 mt-1 md:mt-1.5">AI Startup Founder</p>
+     <p class="text-slate-300/90 leading-relaxed mt-3">
+      Forward‑thinking entrepreneur leading cutting‑edge machine learning ventures. Her strategic insight helps
+      businesses implement and scale AI solutions effortlessly.
+     </p>
+    </div>
+   </article>
+
+   <!-- Card 2 -->
+   <article class="group rounded-3xl overflow-hidden hover:ring-indigo-400/60 transition-all duration-500">
+    <div class="relative aspect-[5/5] bg-gradient-to-br from-violet-200/30 via-fuchsia-200/30 to-pink-200/30">
+     <img src="https://the7.io/elementor-ai/wp-content/uploads/sites/132/2025/01/persons005.jpg" alt="Ethan Carter"
+      class="absolute inset-0 h-full w-full object-cover mix-blend-luminosity group-hover:scale-[1.03] transition-transform duration-700" />
+    </div>
+    <div class="px-7 md:px-8 py-6 md:py-7">
+     <h3 class="text-xl md:text-2xl font-semibold text-white">Ethan Carter</h3>
+     <p class="text-indigo-300 mt-1 md:mt-1.5">Senior AI Engineer</p>
+     <p class="text-slate-300/90 leading-relaxed mt-3">
+      Expert in designing and refining complex neural networks for real‑world impact. Known for hands‑on guidance,
+      empowering teams to harness AI efficiently.
+     </p>
+    </div>
+   </article>
+
+   <!-- Card 3 -->
+   <article class="group rounded-3xl overflow-hidden hover:ring-indigo-400/60 transition-all duration-500">
+    <div class="relative aspect-[5/5] bg-gradient-to-br from-fuchsia-200/30 via-pink-200/30 to-purple-200/30">
+     <img src="https://the7.io/elementor-ai/wp-content/uploads/sites/132/2025/01/persons002.jpg" alt="Sophia Lane"
+      class="absolute inset-0 h-full w-full object-cover mix-blend-luminosity group-hover:scale-[1.03] transition-transform duration-700" />
+    </div>
+    <div class="px-7 md:px-8 py-6 md:py-7">
+     <h3 class="text-xl md:text-2xl font-semibold text-white">Sophia Lane</h3>
+     <p class="text-indigo-300 mt-1 md:mt-1.5">AI Consultant</p>
+     <p class="text-slate-300/90 leading-relaxed mt-3">
+      Specializes in tailoring AI strategies across industries, ensuring seamless integration and tangible growth with a
+      consultative, results‑focused approach.
+     </p>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<!-- Entrance + hover polish -->
+<style>
+ @keyframes rise {
+  from {
+   opacity: 0;
+   transform: translateY(18px);
+  }
+
+  to {
+   opacity: 1;
+   transform: translateY(0);
+  }
+ }
+
+ section [data-rise] {
+  opacity: 0;
+  transform: translateY(18px);
+ }
+
+ section [data-rise].in-view {
+  animation: rise .7s cubic-bezier(.2, .8, .2, 1) .05s both;
+ }
+</style>
+<script>
+ // Optional: subtle entrance on scroll
+ (() => {
+  const cards = document.querySelectorAll('section article');
+  const io = new IntersectionObserver((entries) => {
+   entries.forEach(e => { if (e.isIntersecting) e.target.setAttribute('data-rise', ''); e.target.classList.add('in-view'); });
+  }, { threshold: 0.15 });
+  cards.forEach(c => io.observe(c));
+ })();
+</script>

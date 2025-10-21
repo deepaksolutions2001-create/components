@@ -1,49 +1,60 @@
-<!-- Tailwind CDN -->
+<!-- Tailwind CSS (Play CDN core) -->
 <script src="https://cdn.tailwindcss.com"></script>
-<section class="relative min-h-[600px] bg-[#191514] flex items-end overflow-hidden w-full">
- <!-- Background Image -->
- <div class="absolute inset-0 w-full h-full z-0">
-  <img src="https://websitedemos.net/electrician-company-04/wp-content/uploads/sites/1546/2025/08/5437.jpg"
-   class="w-full h-full object-cover object-center" alt="Background" />
-  <div class="absolute inset-0 bg-black opacity-80"></div>
- </div>
- <!-- Hero Content -->
- <div
-  class="relative z-10 w-full max-w-[1350px] mx-auto flex flex-col md:flex-row items-end md:items-end px-6 md:px-16 pt-28 pb-0">
-  <!-- Left: Text column -->
-  <div class="md:w-[55%] w-full flex flex-col justify-start md:pt-16 pb-16">
-   <div class="text-[#f66a30] font-bold text-base mb-4 uppercase tracking-[0.03em]">24/7 Emergency Service Available
-   </div>
-   <h1
-    class="font-extrabold text-[2.6rem] md:text-[3.2rem] leading-[1.13] text-white mb-3 drop-shadow-xl font-[Montserrat]">
-    Professional<br>Electrical Services.
-   </h1>
-   <div class="text-white text-[1.1rem] leading-relaxed mb-8 max-w-lg font-medium">
-    From emergency repairs to complete rewiring, our certified electricians deliver safe, reliable, and affordable
-    electrical solutions for your home and business.
-   </div>
-   <div class="flex items-center gap-4">
-    <a href="#"
-     class="flex items-center gap-2 bg-[#f66a30] text-white font-bold text-base px-6 py-3 rounded shadow hover:bg-[#de5023] transition">
-     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-     </svg>
-     BOOK A SERVICE
-    </a>
-    <a href="tel:5551234567"
-     class="flex items-center gap-2 bg-black/40 border border-white/40 text-white font-semibold px-5 py-3 rounded hover:bg-black/25 transition">
-     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <path
-       d="M22 16.92V21a1 1 0 01-1.1 1c-9-1-16-8-17-17A1 1 0 014 3h4.09a1 1 0 011 .75c.21.88.4 1.43.7 1.92a1 1 0 01-.23 1.09l-1.28 1.27a15.9 15.9 0 007.08 7.08l1.28-1.27a1 1 0 011.09-.23c.49.3 1.04.49 1.92.7a1 1 0 01.75 1V16.92z" />
-     </svg>
-     (555) 123-4567
-    </a>
-   </div>
+<!-- Tailwind CSS (Play CDN with plugins) -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+
+<!-- Font Awesome Free (all styles) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  crossorigin="anonymous">
+<!-- Font Awesome Brands (second include) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css"
+  crossorigin="anonymous">
+
+<section class="relative min-h-[600px] bg-neutral-900 flex items-end overflow-hidden w-full">
+  <!-- Background Image -->
+  <div class="absolute inset-0 w-full h-full z-0">
+    <img src="https://websitedemos.net/electrician-company-04/wp-content/uploads/sites/1546/2025/08/5437.jpg"
+      class="w-full h-full object-cover object-center" alt="Background" />
+    <div class="absolute inset-0 bg-black/80"></div>
   </div>
-  <!-- Right: Person Image (stretched, flush to hero bottom, curved top) -->
-  <div class="relative w-[350px] h-full flex items-end justify-center">
-   <img src="https://websitedemos.net/electrician-company-04/wp-content/uploads/sites/1546/2025/08/Hero-Image.png"
-    class="w-full h-[500px] object-cover object-center rounded-tl-[240px]  md:mb-0 mb-6" />
+
+  <!-- Hero Content -->
+  <div
+    class="relative z-10 w-full max-w-[1350px] mx-auto flex flex-col md:flex-row items-end md:items-end px-6 md:px-16 pt-28 pb-0">
+    <!-- Left: Text column -->
+    <div class="md:w-[55%] w-full flex flex-col justify-start md:pt-16 pb-16">
+      <div class="text-orange-500 font-bold text-base mb-4 uppercase tracking-[0.03em]">24/7 Emergency Service Available
+      </div>
+
+      <h1
+        class="font-extrabold text-[2.6rem] md:text-[3.2rem] leading-[1.13] text-white mb-3 drop-shadow-xl font-[Montserrat]">
+        Professional<br>Electrical Services.
+      </h1>
+
+      <div class="text-white text-[1.1rem] leading-relaxed mb-8 max-w-lg font-medium">
+        From emergency repairs to complete rewiring, our certified electricians deliver safe, reliable, and affordable
+        electrical solutions for your home and business.
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="#"
+          class="flex items-center gap-2 bg-orange-500 text-white font-bold text-base px-6 py-3 rounded shadow hover:bg-orange-600 transition">
+          <i class="fa-solid fa-bolt w-5 h-5 text-white"></i>
+          BOOK A SERVICE
+        </a>
+
+        <a href="tel:5551234567"
+          class="flex items-center gap-2 bg-black/40 border border-white/40 text-white font-semibold px-5 py-3 rounded hover:bg-black/25 transition">
+          <i class="fa-solid fa-phone w-5 h-5 text-white"></i>
+          (555) 123-4567
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Person Image (stretched, flush to hero bottom, curved top) -->
+    <div class="relative w-[350px] h-full flex items-end justify-center">
+      <img src="https://websitedemos.net/electrician-company-04/wp-content/uploads/sites/1546/2025/08/Hero-Image.png"
+        class="w-full h-[500px] object-cover object-center rounded-tl-[240px] md:mb-0 mb-6" alt="Technician" />
+    </div>
   </div>
- </div>
 </section>
